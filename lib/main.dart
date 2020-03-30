@@ -25,17 +25,64 @@ class _HomeState extends State<Home> {
         fontSize: 25.0
       ),
     ),
-      backgroundColor: Colors.red,
+      backgroundColor: Colors.blue,
       centerTitle: true,
     ),
   body: Column(
+    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
     children: <Widget>[
-      Text(
+      Center(child: Text(
         '$counter',
         style: TextStyle(
-          fontSize: 500.0,
+          fontSize: 200.0,
         ),
       ),
+      ),
+      Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: <Widget>[
+          FloatingActionButton(
+            child: Text(
+              "+",
+              style: TextStyle(fontSize: 50.0,color: Colors.black,),
+              ),
+            onPressed: (){
+              setState(() {
+                counter++;
+              });
+            },
+          ),
+          FloatingActionButton(
+            child: Text(
+              "-",
+              style: TextStyle(fontSize: 50.0,color: Colors.black,),
+              ),
+            onPressed: (){
+              setState(() {
+                counter--;
+              });
+            },
+          ),
+        ],
+      ),
+      SizedBox(height: 50.0),
+      RaisedButton(
+            child: Text(
+              "RESET"
+              ),
+            onPressed: (){
+              setState(() {
+                counter=0;
+              });
+            },
+          ),
+        ],
+
+      ),
+      
   ],
   )
     );
