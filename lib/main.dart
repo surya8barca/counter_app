@@ -12,7 +12,7 @@ void main() => runApp(MaterialApp(
 
 class _HomeState extends State<Home> {
 
-
+  int counter=0;
    
     @override
     Widget build(BuildContext context) {
@@ -25,17 +25,19 @@ class _HomeState extends State<Home> {
         fontSize: 25.0
       ),
     ),
-      backgroundColor: Colors.blue,
+      backgroundColor: Colors.red,
       centerTitle: true,
     ),
-  body: Center(
-    child: Image.network('https://stucocrce.com/img/spbsec.jpeg'),
-    ),
-    backgroundColor: Colors.black,
-    floatingActionButton: FloatingActionButton(onPressed: null,
-      child: Expanded(child: Text("Best")),
-      backgroundColor: Colors.red,
-       )
+  body: Column(
+    children: <Widget>[
+      Text(
+        '$counter',
+        style: TextStyle(
+          fontSize: 500.0,
+        ),
+      ),
+  ],
+  )
     );
   }
 }
