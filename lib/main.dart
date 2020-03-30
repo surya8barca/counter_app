@@ -42,9 +42,14 @@ class _HomeState extends State<Home> {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          FloatingActionButton(
+          ButtonTheme(
+            minWidth: 100.0,
+            height: 100.0,
+            shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(60.0)),
+            buttonColor: Colors.blue,
+            child: RaisedButton(
             child: Text(
               "+",
               style: TextStyle(fontSize: 50.0,color: Colors.black,),
@@ -54,8 +59,14 @@ class _HomeState extends State<Home> {
                 counter++;
               });
             },
+          )
           ),
-          FloatingActionButton(
+          ButtonTheme(
+            minWidth: 100.0,
+            height: 100.0,
+            shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(60.0)),
+            buttonColor: Colors.blue,
+            child: RaisedButton(
             child: Text(
               "-",
               style: TextStyle(fontSize: 50.0,color: Colors.black,),
@@ -65,19 +76,26 @@ class _HomeState extends State<Home> {
                 counter--;
               });
             },
+          )
           ),
         ],
       ),
-      SizedBox(height: 50.0),
-      RaisedButton(
+      SizedBox(height: 15.0),
+      ButtonTheme(
+            minWidth: 300.0,
+            height: 100.0,
+            buttonColor: Colors.black,
+            child: RaisedButton(
             child: Text(
-              "RESET"
+              "RESET",
+              style: TextStyle(fontSize: 50.0,color: Colors.red),
               ),
             onPressed: (){
               setState(() {
                 counter=0;
               });
             },
+          )
           ),
         ],
 
