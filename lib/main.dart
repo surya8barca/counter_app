@@ -34,7 +34,7 @@ class _HomeState extends State<Home> {
       Center(child: Text(
         '$counter',
         style: TextStyle(
-          fontSize: 250.0,
+          fontSize: 220.0,
         ),
       ),
       ),
